@@ -120,7 +120,7 @@ def menu(stats, lvl_counter, enemy):
         match act:
             case "3":
                 print("Ты вышел из игры. До новых встреч!")
-                break
+                sys.exit()
             case "1":
                 up_lvl(stats, lvl_counter, enemy)
             case "2":
