@@ -62,8 +62,8 @@ def fight(stats, lvl_counter, enemy):
             if punch != 'удар':
                 while punch != 'удар':
                     punch = input('Ты можешь выбрать только удар)). Давай еще разок: ')
-            chance_na_krit = random.randint(1, 2)
-            if chance_na_krit == 1:
+            chance_na_krit = random.randint(0, 100)
+            if chance_na_krit <= stats['chance_krit_damage']:
                 final_damage = damage * 1.1
                 if enemy[lvl_counter]['health'] - final_damage <= 0:
                     break
